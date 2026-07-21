@@ -33,6 +33,25 @@ mvn spring-boot:run
 
 The application starts on `http://localhost:8080`.
 
+### Docker Compose
+
+Build and start the app with PostgreSQL using Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+The application will be available on `http://localhost:8080`.
+
+### Database
+
+In local mode the project is configured to use H2 in-memory mode by default.
+When running with Docker Compose, the application connects to PostgreSQL at `db:5432`.
+
+- JDBC URL: `jdbc:postgresql://db:5432/springbatchdb`
+- Username: `springbatch`
+- Password: `springbatchpass`
+
 ### H2 Console
 
 The H2 console is enabled at:
