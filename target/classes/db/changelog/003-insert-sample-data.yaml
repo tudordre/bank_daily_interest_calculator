@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-insert-sample-data
+      author: copilot
+      changes:
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: account_number
+                  value: ACC-1001
+              - column:
+                  name: balance
+                  valueNumeric: 1500.00
+              - column:
+                  name: interest_rate
+                  valueNumeric: 0.0500
+              - column:
+                  name: status
+                  value: ACTIVE
+        - insert:
+            tableName: accounts
+            columns:
+              - column:
+                  name: account_number
+                  value: ACC-1002
+              - column:
+                  name: balance
+                  valueNumeric: 2200.00
+              - column:
+                  name: interest_rate
+                  valueNumeric: 0.0300
+              - column:
+                  name: status
+                  value: ACTIVE
